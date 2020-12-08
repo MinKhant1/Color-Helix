@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public static float z;
-    private float height = 0.58f, speed = 6;
+    private float height = 0.58f, speed = 2;
 
 
      static Color currentColor;
@@ -57,5 +57,20 @@ public class Ball : MonoBehaviour
     public static float GetZ()
     {
         return Ball.z;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("FinishLine"))
+        {
+            print("Finish");
+        }
+        if(other.CompareTag("Fail"))
+        {
+            print("Fail");
+        }
+        if(other.CompareTag("Hit"))
+        {
+            print("Hit");
+        }
     }
 }

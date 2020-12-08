@@ -14,11 +14,11 @@ public class Touch : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
         if (pressing)
         {
-            Debug.Log("pressing");
+            
         }
         else
         {
-            Debug.Log("not pressing");
+
         }
 
         return pressing;

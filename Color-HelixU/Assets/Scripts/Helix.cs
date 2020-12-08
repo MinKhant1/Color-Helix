@@ -29,7 +29,7 @@ public class Helix : MonoBehaviour
 
         transform.eulerAngles = new Vector3(0, 0, angle);
 
-        Debug.Log(angle);
+
 
     }
     public float GetMouseX()
