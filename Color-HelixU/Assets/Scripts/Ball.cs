@@ -66,11 +66,18 @@ public class Ball : MonoBehaviour
         }
         if(other.CompareTag("Fail"))
         {
-            print("Fail");
+            StartCoroutine(GameOver());
         }
         if(other.CompareTag("Hit"))
         {
             print("Hit");
         }
+    }
+    IEnumerator GameOver()
+    {
+        GameController.instance.GenerateLevel();
+        Ball.z = 0;
+        move = false;
+        yield break;
     }
 }
